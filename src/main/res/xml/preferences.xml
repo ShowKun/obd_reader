@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/title_pref_bluetooth">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dialogTitle="@string/pref_bluetooth_title"
+            android:key="enable_bluetooth_preference"
+            android:summaryOff="@string/pref_bluetooth_summaryOff"
+            android:summaryOn="@string/pref_bluetooth_summaryOn"
+            android:title="@string/pref_bluetooth_title" />
+        <ListPreference
+            android:dialogTitle="@string/pref_bluetooth_list_devices_title"
+            android:key="bluetooth_list_preference"
+            android:summary="@string/pref_bluetooth_list_devices_summary"
+            android:title="@string/pref_bluetooth_list_devices_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:enabled="false"
+        android:title="@string/title_pref_obd">
+        <ListPreference
+            android:defaultValue="AUTO"
+            android:dialogTitle="@string/pref_obd_protocols_title"
+            android:enabled="false"
+            android:key="obd_protocols_preference"
+            android:summary="@string/pref_obd_protocols_summary"
+            android:title="@string/pref_obd_protocols_title" />
+        <EditTextPreference
+            android:defaultValue="4"
+            android:dialogTitle="@string/pref_obd_update_period_title"
+            android:key="obd_update_period_preference"
+            android:summary="@string/pref_obd_update_period_summary"
+            android:title="@string/pref_obd_update_period_title" />
+        <EditTextPreference
+            android:defaultValue="70"
+            android:dialogTitle="@string/pref_max_fuel_econ_title"
+            android:key="max_fuel_econ_preference"
+            android:summary="@string/pref_max_fuel_econ_summary"
+            android:title="@string/pref_max_fuel_econ_title" />
+        <EditTextPreference
+            android:defaultValue=".85"
+            android:dialogTitle="@string/pref_volumetric_efficiency_dialog_title"
+            android:key="volumetric_efficiency_preference"
+            android:summary="@string/pref_volumetric_efficiency_summary"
+            android:title="@string/pref_volumetric_efficiency_title" />
+        <EditTextPreference
+            android:defaultValue="1.6"
+            android:dialogTitle="@string/pref_engine_displacement_title"
+            android:key="engine_displacement_preference"
+            android:summary="@string/pref_engine_displacement_summary"
+            android:title="@string/pref_engine_displacement_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:enabled="false"
+        android:title="@string/title_pref_commands">
+        <PreferenceScreen
+            android:key="obd_commands_screen"
+            android:summary="@string/title_pref_commands_summary"
+            android:title="@string/title_pref_commands_title" />
+    </PreferenceCategory>
+</PreferenceScreen>
